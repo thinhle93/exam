@@ -1,0 +1,22 @@
+
+<h3>Write a review for</h3>
+<p> {{ newreview | json }} </p>
+
+<p>{{error}}</p>
+<form (submit)="submitreview()">
+  Your name: <input type="text" name="newreview.customer"[(ngModel)]="newreview.customer" >
+  <br>
+  Stars: <select name="newreview.stars" [(ngModel)]="newreview.stars">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+  <br>
+  Your review: <input type="text" name="newreview.desc" [(ngModel)]="newreview.desc">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<button  [routerLink]="['/alpha']">Cancel</button>

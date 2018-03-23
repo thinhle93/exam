@@ -1,0 +1,14 @@
+
+<h3>Edit restaurant</h3>
+
+<form (submit)="submitedit()">
+  Restaurant name: <input type="text" name="currestdata.name" 
+  [(ngModel)]="currestdata.name">
+  <br>
+  Cusisine type: <input type="text" name="currestdata.cuisine" 
+  [(ngModel)]="currestdata.cuisine">
+  <br>
+  <input type="submit" value="Edit">
+</form>
+
+<button [routerLink]="['/alpha']">Cancel</button>

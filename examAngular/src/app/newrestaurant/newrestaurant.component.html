@@ -1,0 +1,16 @@
+<h2>Register a restaurants</h2>
+
+<p>{{error}}</p>
+<form (submit)="submitnew()">
+  <p>Restaurant name:</p>
+  
+  <input type="text" name="NewRest.name" [(ngModel)]="newRest.name">
+
+  <p>Cuisine:</p>
+  <input type="text" value="Register" name="NewRest.cuisine" [(ngModel)]="newRest.cuisine">
+  <br>
+  <input type="submit" value="Register">
+
+</form>
+
+<button [routerLink]="['/alpha']">Cancel</button>

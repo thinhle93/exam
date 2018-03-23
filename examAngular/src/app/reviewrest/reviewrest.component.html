@@ -1,0 +1,19 @@
+
+
+<button [routerLink]="['/alpha']">Home</button>
+
+<button (click)="addreview(currestid)">New Review</button>
+
+<table class="table">
+    <tr>
+      <th>Customer</th>
+      <th>Stars</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let i of curreviews">
+      <td>{{i.customer}}</td>
+      <td>{{i.stars}}</td>
+      <td>{{i.desc}}</td>
+    </tr>
+  </table>
+  

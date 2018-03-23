@@ -1,5 +1,28 @@
-<p>
-  alpha works!
-</p>
 
-<h1>added new stuff to alpha on exam</h1>
+<html>
+
+    <head>
+   
+         
+      </head>
+<body>
+<button [routerLink]="['/newrestaurant']">New restaurant</button>
+
+
+<table class="table">
+  <tr>
+    <th>Restaurant</th>
+    <th>Cuisine</th>
+    <th>Actions available</th>
+  </tr>
+  <tr class=show *ngFor="let i of allrest">
+    <td>{{i.name}}</td>
+    <td>{{i.cuisine}}</td>
+    <td><button (click)="viewrest(i._id)">Read Reviews</button> 
+      <button (click)="editrest(i._id)">Update</button> 
+      <button (click)="delrest(i._id)">Delete</button>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
